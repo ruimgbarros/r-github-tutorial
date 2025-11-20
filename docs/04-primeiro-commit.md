@@ -24,7 +24,7 @@ Antes de começar, confirma que:
 
 ## Passo 1: Fazer Fork do Repositório
 
-O **fork** cria uma cópia deste repositório na tua conta do GitHub.
+O fork cria uma cópia deste repositório na tua conta do GitHub.
 
 1. **Vai ao repositório original** (se ainda não estás lá):
    - [github.com/ruimgbarros/r-github-tutorial](https://github.com/ruimgbarros/r-github-tutorial)
