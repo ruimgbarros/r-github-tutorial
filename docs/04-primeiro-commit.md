@@ -15,10 +15,10 @@ Ao fim deste exercício, vais saber:
 ## 📋 Pré-requisitos
 
 Antes de começar, confirma que:
-- [ ] Tens o Git instalado e configurado
-- [ ] Tens uma conta no GitHub
-- [ ] Tens o Positron instalado
-- [ ] Fizeste a [configuração inicial](02-configuracao-inicial.md)
+- [X] Tens o Git instalado e configurado
+- [X] Tens uma conta no GitHub
+- [X] Tens o Positron instalado
+- [X] Fizeste a [configuração inicial](02-configuracao-inicial.md)
 
 ---
 
