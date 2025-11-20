@@ -1,0 +1,36 @@
+# R específico
+.Rproj.user
+.Rhistory
+.RData
+.Ruserdata
+
+# Ficheiros temporários do R
+*.Rproj.user/
+*.Rhistory
+*.RData
+*.Ruserdata
+*_cache/
+*_files/
+
+# Quarto
+/.quarto/
+_site/
+_book/
+
+# Dados temporários ou locais
+*.tmp
+*.temp
+
+# Sistema operativo
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+
+# Outputs
+*.html
+*.pdf
+!docs/*.html
+!docs/*.pdf

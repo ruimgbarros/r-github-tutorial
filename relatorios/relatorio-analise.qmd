@@ -1,0 +1,172 @@
+---
+title: "Análise de Vendas - Q1 2024"
+author: "[O TEU NOME]"
+date: today
+format:
+  html:
+    toc: true
+    toc-depth: 2
+    code-fold: true
+    theme: cosmo
+    embed-resources: true
+execute:
+  echo: true
+  warning: false
+  message: false
+---
+
+# Introdução
+
+Este relatório apresenta uma análise das vendas do primeiro trimestre de 2024,
+cobrindo três produtos principais (Laptop, Monitor, Teclado) em três regiões (Norte, Centro, Sul).
+
+**Objetivo**: Identificar padrões de vendas e oportunidades de crescimento.
+
+# Setup
+
+```{r setup}
+#| code-summary: "Carregar pacotes e dados"
+
+# Carregar pacotes
+library(tidyverse)
+library(scales)
+library(knitr)
+
+# Importar dados
+vendas <- read_csv("../data/vendas_mensais.csv", show_col_types = FALSE) %>%
+  mutate(
+    mes = as.Date(paste0(mes, "-01")),
+    valor_total = quantidade * valor_unitario
+  )
+```
+
+# Visão Geral dos Dados
+
+```{r visao-geral}
+#| code-summary: "Estatísticas descritivas"
+
+# TODO: Adicionar tabela com resumo dos dados
+# - Número total de transações
+# - Período coberto
+# - Valor total de vendas
+# - Produtos únicos
+```
+
+# Análise por Região
+
+## Vendas Totais
+
+```{r analise-regiao}
+#| code-summary: "Calcular vendas por região"
+#| fig-cap: "Distribuição de vendas por região"
+
+# TODO: Criar análise agregada por região
+# vendas_regiao <- vendas %>%
+#   group_by(regiao) %>%
+#   summarise(
+#     total_vendas = sum(valor_total),
+#     quantidade_total = sum(quantidade),
+#     transacoes = n()
+#   )
+
+# TODO: Criar gráfico de barras
+# ggplot(vendas_regiao, aes(x = reorder(regiao, total_vendas), y = total_vendas, fill = regiao)) +
+#   geom_col() +
+#   coord_flip() +
+#   scale_y_continuous(labels = label_currency(prefix = "€")) +
+#   labs(title = "Vendas Totais por Região", x = "Região", y = "Valor Total") +
+#   theme_minimal()
+```
+
+::: {.callout-note}
+## Nota para o exercício
+Esta secção será completada quando trabalhares na branch de análise regional!
+:::
+
+# Análise por Produto
+
+## Performance dos Produtos
+
+```{r analise-produto}
+#| code-summary: "Análise por produto"
+
+# TODO: Análise agregada por produto
+# - Qual produto gera mais receita?
+# - Qual tem maior volume de vendas?
+# - Qual tem o ticket médio mais alto?
+```
+
+## Evolução Temporal
+
+```{r evolucao-temporal}
+#| code-summary: "Tendências ao longo do tempo"
+#| fig-cap: "Evolução mensal das vendas por produto"
+#| fig-width: 10
+#| fig-height: 6
+
+# TODO: Criar gráfico de linha mostrando evolução mensal
+# vendas %>%
+#   group_by(mes, produto) %>%
+#   summarise(total = sum(valor_total), .groups = "drop") %>%
+#   ggplot(aes(x = mes, y = total, color = produto)) +
+#   geom_line(size = 1.2) +
+#   geom_point() +
+#   scale_y_continuous(labels = label_currency(prefix = "€")) +
+#   theme_minimal()
+```
+
+# Análise de Vendedores
+
+```{r analise-vendedores}
+#| code-summary: "Performance individual"
+#| tbl-cap: "Top vendedores por receita total"
+
+# TODO: Criar tabela com performance dos vendedores
+# performance <- vendas %>%
+#   group_by(vendedor, regiao) %>%
+#   summarise(
+#     total_vendido = sum(valor_total),
+#     num_transacoes = n(),
+#     ticket_medio = mean(valor_total)
+#   )
+
+# kable(performance, digits = 2, format.args = list(big.mark = " "))
+```
+
+# Conclusões e Recomendações
+
+## Principais Insights
+
+- **Insight 1**: [A completar após análise]
+- **Insight 2**: [A completar após análise]
+- **Insight 3**: [A completar após análise]
+
+## Recomendações
+
+1. [Recomendação baseada nos dados]
+2. [Recomendação baseada nos dados]
+3. [Recomendação baseada nos dados]
+
+## Próximos Passos
+
+- [ ] Analisar dados do Q2 2024
+- [ ] Investigar sazonalidade
+- [ ] Comparar com ano anterior
+
+---
+
+::: {.callout-tip}
+## Como usar este relatório
+Este template de relatório será completado como parte dos exercícios Git:
+1. Cada pessoa do grupo preenche uma secção diferente
+2. Trabalha numa branch própria
+3. Abre Pull Request para revisão
+4. Junta tudo no relatório final!
+:::
+
+# Informação Técnica
+
+```{r sessao}
+#| code-summary: "Informação da sessão R"
+sessionInfo()
+```
